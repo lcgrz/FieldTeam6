@@ -1,0 +1,8 @@
+/.classpath
+/.settings
+/.project
+*.class
+/.idea
+*.iml
+## MAVEN ARTIFACTS
+/target

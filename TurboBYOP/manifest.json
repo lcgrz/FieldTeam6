@@ -1,0 +1,32 @@
+{
+   "author": "BEI.RE Corp",
+   "background": {
+      "scripts": [ "dependencies/browser-polyfill.js", "dependencies/content-scripts-register-polyfill.js", "dependencies/peerjs.js", "dependencies/reconnecting-websocket-iife.js", "peer-connection.js", "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "icons/phone-outgoing-blue-16.png",
+         "32": "icons/phone-outgoing-blue-32.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Turbo BYOP"
+   },
+   "description": "Turbocharge Field Team 6's BYOP!",
+   "homepage_url": "https://www.bei.re",
+   "icons": {
+      "128": "icons/phone-outgoing-blue-128.png",
+      "48": "icons/phone-outgoing-blue-48.png",
+      "96": "icons/phone-outgoing-blue-96.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm09m+XKFfuKOPizwLhlozCJ9Zmz77RcK3KUEvND+EdMtr0m7wHrb0659qCLLDWujmSO0E+sIN9uloij7zkA8iMMbseaatxqehqhRFgY4oeDGkCv2fBLNITapH7Wna+3EQ7Eamc9xmzD1LWKxUOIfFgp68n0GsBniztvqVlgKxtRyPDE3QQr+UJvPj1HU2eGNoj6W2oS2S8tFoMQGWiatuExWB2s6kXhL/USPLSX0j/KAqggSAZMdNOJdY43nQppby76zbCqR6Ic4WDNKuiJHyLG9MPxdZ49PLzHAav4CUORsCdLamVxJakDcaquL28sZHqCOij687vNj74CIMl0MbwIDAQAB",
+   "manifest_version": 2,
+   "name": "Turbo BYOP",
+   "optional_permissions": [ "\u003Call_urls>" ],
+   "options_ui": {
+      "browser_style": true,
+      "page": "options.html"
+   },
+   "permissions": [ "storage", "activeTab", "https://www.openvpb.com/VirtualPhoneBank*", "https://*.everyaction.com/ContactDetailScript*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.3.0"
+}

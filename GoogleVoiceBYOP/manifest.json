@@ -1,0 +1,37 @@
+{
+   "author": "BEI.RE Corp",
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html",
+      "default_title": "GV-BYOP"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "contentScripts/hangoutsListViewManager.js", "contentScripts/hangoutsThreadViewManager.js" ],
+      "matches": [ "https://hangouts.google.com/webchat/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "contentScripts/googleVoiceManager.js" ],
+      "matches": [ "https://voice.google.com/*" ]
+   }, {
+      "all_frames": true,
+      "js": [ "contentScripts/tools.js", "contentScripts/main.js" ],
+      "matches": [ "https://hangouts.google.com/webchat/*", "https://voice.google.com/*" ]
+   } ],
+   "description": "Helper extension to send Turbo BYOP messages via Google Voice. ",
+   "homepage_url": "https://www.bei.re",
+   "icons": {
+      "128": "icon.png",
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwe5pkFXTlbxXqGFuPXpT1p/iWra7t1lWVCigu3liasp1ZJFCU+bDfxD56QTRgSc+gf9K/wIwrl9NO3kcNlYqicpSRzmEnWJsbjdv72l1oFusvyS1lOZlLEAOgsJPXRf2ylp/670rK6RB73mLLlG/NGQK0aV/SwPvXou2YonlUlUa2T4QZobTxIWk3Ui9PY2rVQcDpxeOK59n078M87f9/PCFm3LCQdfWhvL/sGiZuSlA/6QthHMerBzuMQ+E1DQLihnrWkawWMWoTS8EO5IW9CRtkjK1rX32DuM8JVkCQf9Fl6533vlVvAYtlTQb3Racw9p155HaQ24+5bNq7K1xNQIDAQAB",
+   "manifest_version": 2,
+   "name": "Google Voice BYOP",
+   "permissions": [ "clipboardWrite", "clipboardRead", "storage" ],
+   "short_name": "GV-BYOP",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.2.0"
+}
