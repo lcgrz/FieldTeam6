@@ -33,5 +33,5 @@
    "permissions": [ "clipboardWrite", "clipboardRead", "storage" ],
    "short_name": "GV-BYOP",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.2.0"
+   "version": "0.3.0"
 }

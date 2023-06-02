@@ -1,3 +1,8 @@
+// Microsoft Edge compatibility
+if (chrome == null) {
+	chrome = browser;
+}
+
 /**
  * This runs on voice.google.com
  */
@@ -115,8 +120,7 @@ class GoogleVoiceSiteManager {
             this.confirmChatSwitched,
             this.writeMessage,
             this.sendMessage,
-            this.confirmThreadHeaderUpdated,
-            this.confirmSent
+            this.confirmThreadHeaderUpdated
         ];
     }
 
@@ -127,7 +131,7 @@ class GoogleVoiceSiteManager {
             this.fillNumberInput,
             this.startChat,
             this.confirmChatSwitched,
-            this.confirmSent
+            this.confirmThreadHeaderUpdated
         ];
     }
 
