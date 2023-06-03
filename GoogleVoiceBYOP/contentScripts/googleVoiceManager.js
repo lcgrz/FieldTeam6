@@ -1,3 +1,8 @@
+// Microsoft Edge compatibility
+if (chrome == null) {
+	chrome = browser;
+}
+
 /**
  * This runs on voice.google.com
  */
@@ -228,10 +233,11 @@ class GoogleVoiceSiteManager {
     }
 
     confirmSent() {
-        let sendingNote = document.querySelector(selectors.gvSendingNote); // this is the note that says "Sending", it will disappear when it is finished
+        let sentMessage = document.querySelector(selectors.gvSentMessage); 
 
-        if (!sendingNote) {
-            // check if the message we sent is showing up in the chat window
+        if (!sentMessage) {
+            // gvMostRecentMessages may no longer be a valid selector; will 
+            // check validity of this code once I get rate limited again
             let mostRecentMessages = document.querySelectorAll(selectors.gvMostRecentMessages);
             let sentMessageIsThreaded = false;
             if (mostRecentMessages && mostRecentMessages.length) {
