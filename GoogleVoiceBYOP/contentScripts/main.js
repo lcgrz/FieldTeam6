@@ -12,6 +12,7 @@ const selectors = {
     gvMessageEditor: 'textarea[aria-label="Type a message"], #gv-message-input, div[gv-test-id="gv-message-input"]',
     gvSendButtonOld: 'gv-icon-button[icon-name="send"] button[aria-label="Send message"]',
     gvSendButtonNew: 'gv-icon-button-ng2[icon-name="send"][label="Send message"] button',
+    // this is the note that says "Sending" and will disappear when it is finished;
     // this selector is wrong or either too fleeting to detect; probably ok to delete
     gvSendingNote: 'gv-message-item div[ng-if="ctrl.shouldDisplayTransmissionStatus()"] div[ng-if="!ctrl.isFailed()"]',
     gvMostRecentMessages: 'div[gv-id="content"] div[gv-test-id="bubble"] gv-annotation',
